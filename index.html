@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+	
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="Loop Nerd" content="Create one that collects user data and sends it to another page." />
+    <meta name="description" content="This tutorial shows you how to create a simple HTML form using CSS3. The form will collect information from users and send them to a new web page."/>
+    <meta name="keywords" content="Html, Css, Jquery, Wordpress, Free Sites, Wordpress Theme, Responsive Site"/>
+    <meta name="author" content="Alexandre Montanha, adaptado de Loop Nerd" />
+    <meta name="URL" content="https://www.loopnerd.com.br/artigos/css3/formulario-de-cadastro-html-css-pronto"/>
+    <meta http-equiv="content-language" content="pt-br" />
+    <meta name="robots" content="index, follow"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts-icones.css">
+	<title>Cadastro com Consulta ao CEP</title>
+ 
+ </head>-
+
+<body>
+    
+<header class="main_header container">        
+    <div class="content">
+    
+        <div class="main_header_logo">
+            <img src="https://yata-apix-42b086ac-7146-4fba-b16d-c950b2524eae.s3-object.locaweb.com.br/ee870b65ed22471b9e29b73d5d8b96a7.png" alt="Logo de Cadastro" title="Cadastro"/>
+        </div>
+    
+    </div>
+</header>
+
+<main class="main_content container">
+
+        
+    <section class="section-seu-codigo container">
+        
+        <div class="content">
+                        
+            <div class="box-artigo">
+                
+               
+                <!--Inícia Formulário-->
+
+                    <div class="container_form">
+            
+                            <h1>Formulário de Cadastro</h1>
+
+                            <form class="form" action="#" method="post">
+                                
+                                <div class="form_grupo">
+                                    <label for="nome" class="form_label">Nome</label>
+                                    <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" required>
+                                </div>
+                                
+                                <div class="form_grupo">
+                                    <label for="e-mail" class="form_label">Email</label>
+                                    <input type="email" name="email" class="form_input" id="email" placeholder="seuemail@email.com" required>
+                                </div>
+                                
+                                <div class="form_grupo">
+                                    <label for="datanascimento" class="form_label">Data de Nascimento</label>
+                                    <input type="date" name="datanascimento" class="form_input" id="datanascimento" placeholder="Data de Nascimento" required>
+                                </div>        
+
+                                <div class="form_grupo">
+                                    
+                                    <label for="estadocivil" class="text">Estado civil</label>
+                                    <select name="estadocivil" class="dropdown" required title="Estado Civil">
+                                        
+                                        <option selected disabled class="form_select_option" value="">Selecione</option>
+                                        <option value="Solteiro" class="form_select_option">Solteiro(a)</option>
+                                        <option value="Casado" class="form_select_option">Casado(a) </option>
+                                        <option value="Divorciado" class="form_select_option">Divorciado(a)</option>                    
+                                        <option value="Viúvo" class="form_select_option">Viúvo(a)</option>                    
+                                    
+                                    </select>
+
+                                </div>
+
+                                <div class="form_grupo">
+
+                                    <span class="legenda">Sexo:</span>
+                                    
+                                    <div class="radio-btn">
+                                        <input type="radio" class="form_new_input" id="masculino" name="sexo" value="Masculino">
+                                        <label for="masculino" class="radio_label form_label"> <span class="radio_new_btn"></span> Masculino</label>
+                                    </div>
+
+                                    <div class="radio-btn">
+                                        <input type="radio" class="form_new_input" id="feminino" name="sexo" value="Feminino">
+                                        <label for="feminino" class="radio_label form_label"> <span class="radio_new_btn"></span> Feminino</label>
+                                    </div>
+
+                                </div>
+                              
+
+                                <div class="form_grupo">
+
+                                    <span class="legenda">Endereço</span>
+
+                                    <div class="form_grupo form_grupo-cep">
+                                        <label for="cep" class="form_label">CEP</label>
+                                        <input type="text" name="cep" class="form_input" id="cep" placeholder="CEP" required>
+
+                                        <button type="button" class="btn-cep" id="btn-cep" onclick="consultaCep()">Consultar</button>
+
+                                        <label for="logradouro" class="form_label">Logradouro</label>
+                                        <input type="text" name="logradouro" class="form_input" id="logradouro" placeholder="Logradouro" required>
+
+                                        <label for="numero" class="form_label">Número</label>
+                                        <input type="text" name="numero" class="form_input" id="numero" placeholder="Número" required>
+
+                                        <label for="complemento" class="form_label">Complemento</label>
+                                        <input type="text" name="complemento" class="form_input" id="complemento" placeholder="Complemento" required>
+
+                                        <label for="bairro" class="form_label">Bairro</label>
+                                        <input type="text" name="bairro" class="form_input" id="bairro" placeholder="Bairro" required>
+
+                                        <label for="cidade" class="form_label">Cidade</label>
+                                        <input type="text" name="cidade" class="form_input" id="cidade" placeholder="Cidade" required>
+
+                                        <label for="estado" class="form_label">Estado</label>
+                                        <input type="text" name="estado" class="form_input" id="estado" placeholder="Estado" required>
+
+                                    </div>
+
+
+                                    <div class="submit">
+
+                                      <input type="hidden" name="acao" value="enviar">
+                                      <button type="submit" name="Submit" class="submit_btn" >Cadastrar</button>
+                                    
+                                    </div>
+                            </form>
+
+                    </div><!--container_form-->
+
+                <!--Finaliza Formulário-->
+
+
+            </div><!--Box Artigo-->
+
+
+        <div class="clear"></div>
+        </div>
+    </section><!--FECHA BOX HTML-->
+
+
+</main>
+
+<footer class="main_footer container">
+    <div class="main_footer_copy">
+
+        <p class="m-b-footer"> Loop Nerd - 2021, todos os direitos reservados.</p> 
+        <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: loopnerd.com.br</p>
+    
+    </div>
+</footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/script.js"></script>
+                    
+</body>
+</html>
