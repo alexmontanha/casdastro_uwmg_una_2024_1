@@ -28,7 +28,7 @@ Para adaptar o template de cadastro web do Loop Nerd ao exercício proposto, for
     1. Clone o repositório:
 
     ```bash
-    git clone
+    git clone https://github.com/alexmontanha/casdastro_uwmg_una_2024_1.git
     ```
     2. Abra o arquivo `index.html` no navegador de sua preferência.
     3. Preencha o campo "CEP" com um CEP válido e clique no botão "Buscar".
@@ -36,5 +36,5 @@ Para adaptar o template de cadastro web do Loop Nerd ao exercício proposto, for
 
 ## Autor
 
-- [Loop Nerd]()
-- [Adaptação por: Professor Alexandre Montanha]()
+- [Loop Nerd](https://www.loopnerd.com.br/codigos-css-prontos/formulario-de-cadastro-html-css-pronto/)
+- [Adaptação por: Professor Alexandre Montanha](https://www.linkedin.com/in/professor-montanha/)
